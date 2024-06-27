@@ -1,4 +1,4 @@
-name: Build App and Unit tests
+name: Build App, Unit tests and UI tests
 
 on:
   push:
@@ -41,5 +41,7 @@ jobs:
       run: npm install
     - name: Install Playwright
       run: npx playwright install
+    - name: Start app on localhost
+      run: npm start
     - name: Run ui tests
       run: npm run test:ui
