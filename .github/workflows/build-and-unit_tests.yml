@@ -41,7 +41,7 @@ jobs:
       run: npm install
     - name: Install Playwright
       run: npx playwright install
-    - name: Start app on localhost
-      run: npm start
+    - name: Start app on localhost and close the open terminal
+      run: npm start &
     - name: Run ui tests
       run: npm run test:ui
